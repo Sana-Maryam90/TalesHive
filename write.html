@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-heading {
+            font-size: 24px;
+            font-weight: bold;
+            /* margin-bottom: 10px; */
+            text-align: center;
+            /* margin-bottom: 30px; */
+        }
+
+        .write-options {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .write-options div {
+            width: calc(50% - 20px);
+            height: 550px;
+            background-color: #fdfd96;
+            color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 50px;
+        }
+
+        .individual-writing {
+            background-image: url('individual_writing.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .collaborative-writing {
+            background-image: url('collaborative_writing.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .individual-writing,
+        .collaborative-writing {
+            cursor: pointer;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .individual-writing:hover,
+        .collaborative-writing:hover {
+            transform: scale(0.95);
+        }
+
+        .category-section {
+            margin-top: 40px;
+        }
+
+        .category-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .category-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .category-item {
+            width: 80%;
+            height: 50px;
+            background-color: #ffdd43;
+            /* margin-right: 10px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .story-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .story-item {
+            width: 30%;
+            padding: 10px;
+            margin: 20px auto;
+            box-sizing: border-box;
+            text-align: center;
+            border: black solid;
+            border-width: 2px;
+            border-radius: 10px;
+        }
+
+        .story-item img {
+            width: 100%;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .story-item h3 {
+            margin-top: 10px;
+        }
+
+        .story-item p {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <h2 class="section-heading">Let Your Creativity Flow</h2>
+
+        <div class="write-options">
+            <div class="individual-writing">
+                <a href="draft.html">
+                    <h3>Start Writing</h3>
+                </a>
+                <p>Express your creativity and share your story with the world.</p>
+            </div>
+
+            <div class="collaborative-writing">
+                <a href="request.html">
+                    <h3>Contribute to Stories</h3>
+                </a>
+                <p>Collaborate with other writers and contribute to existing stories.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Top stories -->
+    <div class="top-stories">
+        <h2 class="category-heading">Write in our Top Stories</h2>
+
+        <div class="story-section">
+
+            <div class="story-item">
+                <img src="individual_writing.jpg" alt="Story 1">
+                <h3>Story 1</h3>
+                <p>A little description of Story 1.</p>
+            </div>
+            <div class="story-item">
+                <img src="individual_writing.jpg" alt="Story 2">
+                <h3>Story 2</h3>
+                <p>A little description of Story 2.</p>
+            </div>
+            <div class="story-item">
+                <img src="individual_writing.jpg" alt="Story 3">
+                <h3>Story 3</h3>
+                <p>A little description of Story 3.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- displaying categories -->
+    <div class="category-section">
+
+        <h2 class="category-heading">Have a Look at Our Categories</h2>
+
+        <!-- Drama stories -->
+        <div class="category-list">
+
+            <div class="category-item">
+                <p class="category-name">Drama</p>
+                <!-- <img src="path/to/image.jpg" alt="Drama"> -->
+            </div>
+
+            <div class="story-section">
+
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 1">
+                    <h3>Story 1</h3>
+                    <p>A little description of Story 1.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 2">
+                    <h3>Story 2</h3>
+                    <p>A little description of Story 2.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 3">
+                    <h3>Story 3</h3>
+                    <p>A little description of Story 3.</p>
+                </div>
+
+            </div>
+
+            <!-- Fantasy stories -->
+            <div class="category-item">
+                <p class="category-name">Fantasy</p>
+                <!-- <img src="path/to/image.jpg" alt="Fantasy"> -->
+            </div>
+
+            <div class="story-section">
+
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 1">
+                    <h3>Story 1</h3>
+                    <p>A little description of Story 1.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 2">
+                    <h3>Story 2</h3>
+                    <p>A little description of Story 2.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 3">
+                    <h3>Story 3</h3>
+                    <p>A little description of Story 3.</p>
+                </div>
+
+            </div>
+
+            <!-- Horror stories -->
+            <div class="category-item">
+                <p class="category-name">Horror</p>
+                <!-- <img src="path/to/image.jpg" alt="Horror"> -->
+            </div>
+
+            <div class="story-section">
+
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 1">
+                    <h3>Story 1</h3>
+                    <p>A little description of Story 1.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 2">
+                    <h3>Story 2</h3>
+                    <p>A little description of Story 2.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 3">
+                    <h3>Story 3</h3>
+                    <p>A little description of Story 3.</p>
+                </div>
+
+            </div>
+
+            <!-- Thriller stories -->
+            <div class="category-item">
+                <p class="category-name">Thriller</p>
+                <!-- <img src="path/to/image.jpg" alt="Thriller"> -->
+            </div>
+
+            <div class="story-section">
+
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 1">
+                    <h3>Story 1</h3>
+                    <p>A little description of Story 1.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 2">
+                    <h3>Story 2</h3>
+                    <p>A little description of Story 2.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 3">
+                    <h3>Story 3</h3>
+                    <p>A little description of Story 3.</p>
+                </div>
+
+            </div>
+
+            <!-- Adventure stories -->
+            <div class="category-item">
+                <p class="category-name">Adventure</p>
+                <!-- <img src="path/to/image.jpg" alt="Adventure"> -->
+            </div>
+
+            <div class="story-section">
+
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 1">
+                    <h3>Story 1</h3>
+                    <p>A little description of Story 1.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 2">
+                    <h3>Story 2</h3>
+                    <p>A little description of Story 2.</p>
+                </div>
+                <div class="story-item">
+                    <img src="individual_writing.jpg" alt="Story 3">
+                    <h3>Story 3</h3>
+                    <p>A little description of Story 3.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

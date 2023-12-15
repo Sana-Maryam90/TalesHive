@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalesHive</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="home.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="Taleshive.png" alt="TalesHive Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="category.html">Read</a></li>
+      <li><a href="draft.html">Write</a></li>
+      <li><a class="loginpopup" href="#">Login</a></li>
+      <li><a class="icon-close" href="#"><i class='bx bx-user'>Profile</i></a></li>
+      <!-- <span ><i class='bx bx-x'></i></span> -->
+
+    </ul>
+  </nav>
+
+  <div class="alert"></div>
+<!-- 
+    <button class="loginpopup">Login</button>
+    <button><a href="category.html">READ</a></button> -->
+
+    <div class="wrapper">
+        <span class="icon-close"><i class='bx bx-x'></i></i></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form method="POST" action='login.php'>
+                <div class="inputbox">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" name='email' required>
+                    <label>Email</label>
+                </div>
+                <div class="inputbox">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" name='password' required>
+                    <label>Password</label>
+                </div>
+                <!-- <div class="remember-forget">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forget Password?</a>
+                </div> -->
+                <input type="submit" class="btn" value=Login name="login">
+                <div class="login-register">
+                    <p>Don't have an account?&nbsp;<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form method="POST" action='register.php'>
+                <div class="inputbox">
+                    <span class="icon"><i class='bx bxs-user'></i></i></span>
+                    <input type="text" name='username' required>
+                    <label>Username</label>
+                </div>
+                <div class="inputbox">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" name='email' required>
+                    <label>Email</label>
+                </div>
+                <div class="inputbox">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" name='password' required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox" required>I agree to the terms & conditions</label>
+                </div>
+                <input type="submit" class="btn" value=Register>
+                <div class="login-register">
+                    <p>Already have an account?&nbsp;<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="profile">
+        <span class="profile-icon"><i class='bx bxs-user-circle'></i></span>
+        <!-- <a href="#" class="profile-icon"><i class='bx bxs-user-circle'></i></a> -->
+
+        <div class="profile-popup">
+            <!-- <span class="username"></span> -->
+            <div class="username-bar">
+                <div class="user-initial-icon"></div>
+                <h3 class="username"></h3>
+            </div>
+            <div class="profile-options">
+                <div class="option">
+                    <span class="icon"><i class='bx bxs-user-account' ></i></span>
+                    <a href="viewprofile.html" onclick="location.href=this.href+'?userid='+useridParam;return false;">View profile</a>
+                </div>
+                <div class="option">
+                    <span class="icon"><i class='bx bxs-briefcase' ></i></span>
+                    <a href="draft.html" onclick="location.href=this.href+'?userid='+useridParam;return false;">Your Workspace</a>
+                </div class="option">
+                <div class="option">
+                    <span class="icon"><i class='bx bxs-log-out' ></i></span>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <section class="home-container">
+    <div class="home-content">
+      <h1>Unleash Your Creativity</h1>
+      <p>Start Writing Today and Inspire Others</p>
+    </div>
+    <div class="bee"></div>
+  </section>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Let Your Voice be<span class="highlight"> Heard </span>!</h1>
+      <p>Share Your Stories with the World</p>
+    </div>
+  </section>
+
+  <!-- Listening Section -->
+  <section id="listening">
+    <div class="listening-content">
+      <h2>Or....</h2>
+    </div>
+  </section>
+
+  <section class="Read_stories">
+    <div class="read_div">
+      <h1>Discover a World of Stories</h1>
+      <p>Immerse Yourself in Enchanting Narratives</p>
+    </div>
+    <div class="Oldbook"></div>
+  </section>
+
+  <!-- All Covered Section -->
+  <section id="all-covered">
+    <div class="all-covered-content">
+      <h2>We've got it all covered!</h2>
+      <p>Explore a diverse collection of stories and contribute your own.</p>
+      <a href="#top-stories" class="read-now-button">Read Now</a>
+    </div>
+  </section>
+
+  <!-- Numbers Section -->
+  <section id="numbers">
+    <h2>Join a Thriving Community</h2>
+    <div class="numbers-content">
+
+      <div class="number-box">
+        <span class="number">10K+</span>
+        <span class="number-label">Users</span>
+      </div>
+      <div class="number-box">
+        <span class="number">500+</span>
+        <span class="number-label">Writers</span>
+      </div>
+      <div class="number-box">
+        <span class="number">50K+</span>
+        <span class="number-label">Shares</span>
+      </div>
+      <div class="number-box">
+        <span class="number">100K+</span>
+        <span class="number-label">Likes</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="listening">
+    <div class="listening-content">
+      <h2></h2>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section id="cta">
+    <div class="cta-content">
+      <h2>Still here?</h2>
+      <p>Let's get together then...</p>
+      <a href="#write" class="start-writing-button">Start Writing</a>
+    </div>
+  </section>
+
+  <section id="listening">
+    <div class="listening-content">
+      <h2></h2>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 TalesHive. All rights reserved.</p>
+  </footer>
+
+    <script src="login.js"></script>
+
+    <!-- Adding userid in profile and workspace href link -->
+    <script type="text/javascript">
+        var useridParam = urlParams.get("userid");
+    </script>
+</body>
+
+</html>

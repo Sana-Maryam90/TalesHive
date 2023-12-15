@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Cherry+Bomb+One&family=Indie+Flower&family=Josefin+Sans&family=Montserrat&family=Orbitron&family=Phudu&family=Poppins:wght@400;900&family=Prompt:wght@400;600;900&family=Roboto&family=Russo+One&family=Sacramento&family=Tilt+Warp&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="readPage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+          <div class="bgImg"></div>
+        </header>
+
+
+        <main>
+          <aside class="sidebar1">
+          </aside>
+
+          <div class="content">
+            <h1 id="title">TITLE</h1>
+            <br>
+            <p id="content">Content : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor id ex efficitur dictum eget a tellus. Aliquam ut suscipit ex. Duis vestibulum pulvinar risus, non placerat metus dapibus a. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus placeat perferendis ducimus natus! Laborum sunt, natus illo laboriosam aspernatur quae. Ipsum molestiae quia incidunt voluptatum id non ex laudantium ratione, laborum sapiente?
+            <br> <br>  
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quas odit aliquid dolorem, nostrum ratione neque repellat error possimus, libero ad quam, saepe in quae consectetur sit eius officiis ipsum suscipit.<br><br> Maiores quisquam eum sint adipisci tenetur, molestiae minus! Iusto voluptatum modi molestiae, quidem labore non, id ad distinctio impedit esse ducimus commodi temporibus laudantium sint sapiente dolorem nisi veritatis fugiat itaque molestias sit! Commodi vitae, non sequi nostrum illum placeat vel aliquid cum. Deserunt dolorem fugit quibusdam,<br><br> ad vitae aliquam, culpa voluptatum officia, enim pariatur natus autem! Odit qui cupiditate aut id dolore obcaecati, nisi sit velit earum impedit facere at praesentium corrupti provident voluptatem. Veniam temporibus doloremque eos cumque vero voluptatem natus mollitia quaerat,<br><br> ad nam quasi nobis in nemo autem commodi repellat explicabo dignissimos itaque! Voluptate veniam culpa quas libero illum quo perspiciatis iste nesciunt fugit. Neque harum asperiores recusandae saepe voluptas vel tenetur excepturi, laboriosam, blanditiis perferendis optio fuga. Quia deserunt, itaque laborum porro, rerum tempora aliquid corporis soluta facere neque dolorum doloremque recusandae facilis eaque illum totam. Laborum voluptatem quae nobis, nam recusandae optio corporis, in vel rem veniam reprehenderit tempore.<br> <br>Soluta iusto nobis veritatis aliquid, corporis architecto vitae consequatur nihil dolore consequuntur reiciendis ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque repellendus saepe, laudantium qui temporibus consectetur. Ea adipisci expedita sint rerum! Odit laboriosam aut at commodi non nemo quasi asperiores iusto, suscipit dicta maxime possimus ad quas delectus nesciunt, voluptatem iste<br> <br>
+            </p>
+          </div>
+          
+          <aside class="sidebar2">
+            <table>
+                <tr>
+                    <td>Writer</td>
+                    <td class="value">
+                        <ul style="list-style: none;">
+                            <li id="writer"></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Genres</td>
+                    <td class="value" id="categ">Horror, Fantasy</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td class="value" id="date">jan-2023</td>
+                </tr>
+            </table>
+
+            <div class="socials">
+              <a  href="#" onclick="handleLike()"><img id="like" src="images/like.png" ></a>
+
+              <a  href="https://twitter.com/intent/tweet?text=<Your text>&url=" + encodeURIComponent(window.location.href)" onclick="handleShare()">
+                    <img src="images/twitter.png"></a>
+
+              <a  href="https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href)" onclick="handleShare()">
+                    <img src="images/facebook (1).png" ></a>
+
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=" + encodeURIComponent(window.location.href)" onclick="handleShare()">
+                    <img src="images/lin.png">
+              </a>    
+            </div>
+          </aside>
+
+        </main>
+
+        <footer>
+          <div class="fsidebar"></div>
+          <div class="fcontent">
+            <h2>Leave a Comment!</h2>
+            <form class="comment-form" method="post" action="post_comments.php" id="comment-form">
+              <input type="hidden" name="s_id" id="value-field" value="">
+              <input type="text" name= "u_name" placeholder="   Enter Name" class="n-input">
+              <textarea name="text" class="comment-input" placeholder="Write your comment here"></textarea>
+              <button class="comment-button" type="button" onclick="submitComment();">Submit</button>
+            </form>
+            <hr>
+            <div class="comments" id="comments">
+              <h2>Comments</h2>
+              <!-- <div class="comment">
+                <h5>Name</h5>
+                <p class="comment-date">21/Mar/2023</p>
+                <p class="comment-text">Content...something i'm doing is not what i wanted</p>
+              </div>  
+              <div class="comment">
+                <h5>Name</h5>
+                <p class="comment-date">21/Mar/2023</p>
+                <p class="comment-text">content: this is what you call a quality!!</p>
+              </div>  -->
+            </div>
+         </div>
+         <div class="fsidebar2"></div>
+        </footer>
+
+          <script>
+           const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            // const response = urlParams.get("response");
+            const val = urlParams.get("value");
+            document.getElementById("value-field").value = val;
+            loadComments(val);
+
+       
+              // Send the value to the PHP file using AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "get_stories.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                // Handle the response from the PHP file
+                var response = xhr.responseText;
+                console.log(response);
+                const data = JSON.parse(response);
+                console.log(data.story);
+                let story = data.story; // Get the story object
+                // let writerId = data.userid; // Get the writers array
+              
+                let title = story.title;
+                let content = story.content.replace(/\n/g, "<br>");
+                let date = story.date;
+                let username = story.username;
+                let Genres = story.categories;
+              
+                document.getElementById("title").innerHTML = title;
+                document.getElementById("content").innerHTML = content;
+                document.getElementById("date").innerHTML = date;
+                document.getElementById("writer").innerHTML = username;
+                document.getElementById("categ").innerHTML = Genres;
+              }
+            };
+            xhr.send("clickedValue=" + encodeURIComponent(val));
+          </script>
+    </div>  
+</body>
+</html>

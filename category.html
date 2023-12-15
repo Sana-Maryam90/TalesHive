@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="category.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander&family=Orelega+One&family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+    <script src="createStoryDiv.js"></script>
+    <script src="loadStories.js"></script>
+    <script>
+        function showCategory(category) {
+        // Get all category buttons
+        const buttons = document.getElementsByClassName('category');
+        console.log(category);
+        // Remove active class from all buttons
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove('active');
+        }
+      
+        // Add active class to the clicked button
+        event.target.classList.add('active');
+      
+        // Hide all category contents
+        const contents = document.getElementsByClassName('category');
+        for (let i = 0; i < contents.length; i++) {
+          contents[i].classList.remove('active');
+        }
+      
+        // Show the selected category content
+        document.getElementById(category).classList.add('active');
+      }
+
+      </script>
+</head>
+<body>
+    <header>
+        <div class="bgImg">
+            <img src="images/Vector 21.png" class="bgImg1">
+            <img src="images/Vector 31.png" class="bgImg2">
+            <h1 class="upr">Here We Unleash</h1>
+            <h1 class="lwr">The Power Of Shared Imagination</h1>
+        </div>
+        <div class="categories">
+            <button id="All" class="category active" onclick="loadAll(); showCategory('All');">All</button>
+            <button id="Horror" class="category" onclick="loadHorror(); showCategory('Horror');">Horror</button>
+            <button id="Comedy" class="category" onclick="loadComedy(); showCategory('Comedy');">Comedy</button>
+            <button id="Sci-Fi" class="category" onclick="loadScifi(); showCategory('Sci-Fi');">Sci-Fi</button>
+            <button id="Romance" class="category" onclick="loadRomance(); showCategory('Romance');">Romance</button>
+            <button id="Drama" class="category" onclick="loadDrama(); showCategory('Drama');">Drama</button>
+            <button id="Thriller" class="category" onclick="loadThriller(); showCategory('Thriller');">Thriller</button>
+            <button id="Action" class="category" onclick="loadAction(); showCategory('Action');">Action</button>
+        </div>
+    </header>
+    <main id="storyContainer">
+        <div class="prod1 product">
+            <div class="desc">Gershom Fish never imagined he’d ever respect anyone as bigoted as Leo Stolz.
+                <br><br>
+                When he arrived to prison, Gershom made a “fight or die” decision. He was given a shank and ordered to stab a Correctional Officer that Stolz, the Aryan Apostates shot caller, did not deem sufficiently compassionate toward White inmates.
+                <br><br>
+                In exchange for his decision, a decision motivated more by fear than by courage, Fish was not forced to renounce his Judaism, but after the bloody ritual of initiation, Gershom Fish’s name became “Gerry Ish.” To Stolz, and to the stabbed C.O.’s colleagues, Gershom Fish was now, simply, “Jewish Gerry.”
+                </div>
+            <div class="title"><h4>Some Name</h4><p>23-04-2023</p></div>
+            <div class="status">
+                <div class="comment"><img src="images/comment-alt-dots.png"><p>25</p></div>
+                <div class="share"><img src="images/arrow-up-right.png"><p>5</p></div>
+                <div class="rate"><img src="images/star (2).png"><p>4.5</p></div>
+            </div>
+        </div>
+        <div class="prod2 product">
+            <div class="desc"></div>
+            <div class="title"><h4>Pulp Fiction</h4><p>23-04-2023</p></div>
+            <div class="status">
+                <div class="comment"><img src="images/comment-alt-dots.png"><p>25</p></div>
+                <div class="share"><img src="images/arrow-up-right.png"><p>5</p></div>
+                <div class="rate"><img src="images/star (2).png"><p>4.5</p></div>
+            </div>
+        </div>
+        <div class="prod3 product">
+            <div class="desc"></div>
+            <div class="title"><h4>Shawshank Redemption</h4><p>23-04-2023</p></div>
+            <div class="status">
+                <div class="comment"><img src="images/comment-alt-dots.png"><p>25</p></div>
+                <div class="share"><img src='images/up-arrow.png'><p>5</p></div>
+                <div class="rate"><img src="images/star (2).png"><p>4.5</p></div>
+            </div>
+        </div>
+        <div class="prod4 product">
+            <div class="desc"></div>
+            <div class="title"><h4>Hereditary</h4><p>23-04-2023</p></div>
+            <div class="status">
+                <div class="comment"><img src="images/comment-alt-dots.png"><p>25</p></div>
+                <div class="share"><img src='images/up-arrow.png'><p>5</p></div>
+                <div class="rate"><img src="images/star (2).png"><p>4.5</p></div>
+            </div>
+        </div>
+        <div class="prod5 product">
+            <div class="desc"></div>
+            <div class="title"><h4>Midsommer</h4><p>23-04-2023</p></div>
+            <div class="status">
+                <div class="comment"><img src="images/comment-alt-dots.png"><p>25</p></div>
+                <div class="share"><img src='images/up-arrow.png'><p>5</p></div>
+                <div class="rate"><img src="images/star (2).png"><p>4.5</p></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="foo-content">
+            <a href="#" class="back">Back To Top</a>
+            <p class="policies">@Software Community. All Rights Reserved.</p>
+            <div class="navs">
+                <a class="home">Home</a>
+                <a class="login">Login</a>
+                <a class="read">Read</a>
+                <a class="write">Write</a>
+                <!-- <div class="home"><button>Home</button></div>
+                <div class="login"><button>Login</button></div>
+                <div class="read"><button>Read</button></div>
+                <div class="write"><button>Write</button></div> -->
+            </div>
+        </div>
+    </footer>
+        <script>
+            loadAll();
+        </script>
+</body>
+</html>
