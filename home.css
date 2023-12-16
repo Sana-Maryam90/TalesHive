@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'EB Garamond', serif;
   color: #011526;
-  background-image: url(bgTaleshive.png);
+  background-image: url(images/bgTaleshive.png);
   background-repeat: repeat-y;
 }
 
@@ -96,7 +96,7 @@ nav {
 .bee {
   flex: 1;
   height: 600px;
-  background-image: url("homebee.jpg");
+  background-image: url("images/homebee.jpg");
   background-size: cover;
   background-position: center;
   margin-right: 120px;
@@ -231,12 +231,12 @@ nav {
 .number {
   font-size: 3rem;
   font-weight: bold;
-  color: #011526;
+  color: #f2ca52;
 }
 
 .number-label {
   font-size: 1.2rem;
-  color: #011526;
+  color: #fff;
 }
 
 /* Call-to-Action Section Styles */
