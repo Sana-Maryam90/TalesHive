@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>TalesHive</title>
 
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="profile.css">
@@ -29,9 +29,9 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="category.html">Read</a></li>
-            <li><a href="draft.html">Write</a></li>
+            <li><a class="write-login" href="#">Write</a></li>
             <li><a class="loginpopup" href="#">Login</a></li>
-            <li><a class="profile-icon" href="#"><i class='bx bx-user'>Profile</i></a></li>
+            <li><a class="profile-icon" href="#"><i class='bx bxs-user-circle'></i></a></li>
             <!-- <span ><i class='bx bx-x'></i></span> -->
 
         </ul>
@@ -109,8 +109,7 @@
             <div class="profile-options">
                 <div class="option">
                     <span class="icon"><i class='bx bxs-user-account'></i></span>
-                    <a href="viewprofile.html"
-                        onclick="location.href=this.href+'?userid='+useridParam;return false;">View profile</a>
+                    <a class="button-profile" href="viewprofile.html" onclick="location.href=this.href+'?userid='+useridParam;return false;">View profile</a>
                 </div>
                 <div class="option">
                     <span class="icon"><i class='bx bxs-briefcase'></i></span>
@@ -216,7 +215,7 @@
     </footer>
 
     <script src="login.js"></script>
-
+    <script src="viewprofile.js"></script>
 
     <!-- Adding userid in profile and workspace href link -->
     <script type="text/javascript">
